@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors - Red for focus sessions */
+  --primary: 0 73% 69%;   
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary Colors - Teal for calm breaks */
+  --secondary: 174 64% 56%;
+  --secondary-foreground: 0 0% 0%;
+  
+  /* Accent Colors - Blue for productivity */
+  --accent: 201 71% 56%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* System Colors */
+  --success: 152 57% 52%;
+  --success-foreground: 210 40% 98%;
+  --success-muted: 152 57% 90%;
+
+  --warning: 45 93% 67%;
+  --warning-foreground: 48 96% 98%;
+  --warning-muted: 45 93% 90%;
+
+  --error: 0 73% 69%;
+  --error-foreground: 210 40% 98%;
+  --error-muted: 0 73% 90%;
+
+  --info: 201 71% 56%;
+  --info-foreground: 0 0% 0%;
+  --info-muted: 201 71% 90%;
+  
+  /* Surface Colors */
+  --surface: 0 0% 100%;
+  --surface-foreground: 220 13% 18%;
+  --surface-muted: 220 13% 96%;
+
+  --background: 0 0% 100%;
+  --foreground: 220 13% 18%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 220 13% 18%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 13% 18%;
+
+  --muted: 220 13% 96%;
+  --muted-foreground: 220 13% 45%;
+
+  /* Primary Scale */
+  --primary-50: 0 100% 97%;
+  --primary-100: 0 100% 94%;
+  --primary-200: 0 95% 88%;
+  --primary-300: 0 90% 78%;
+  --primary-400: 0 82% 74%;
+  --primary-500: 0 73% 69%;
+  --primary-600: 0 65% 59%;
+  --primary-700: 0 58% 49%;
+  --primary-800: 0 52% 39%;
+  --primary-900: 0 47% 29%;
+  
+  /* Secondary Scale */
+  --secondary-50: 174 100% 95%;
+  --secondary-100: 174 100% 90%;
+  --secondary-200: 174 85% 80%;
+  --secondary-300: 174 75% 70%;
+  --secondary-400: 174 69% 63%;
+  --secondary-500: 174 64% 56%;
+  --secondary-600: 174 59% 46%;
+  --secondary-700: 174 54% 36%;
+  --secondary-800: 174 49% 26%;
+  --secondary-900: 174 44% 16%;
+  
+  /* Accent Scale */
+  --accent-50: 201 100% 95%;
+  --accent-100: 201 100% 90%;
+  --accent-200: 201 85% 80%;
+  --accent-300: 201 78% 70%;
+  --accent-400: 201 74% 63%;
+  --accent-500: 201 71% 56%;
+  --accent-600: 201 66% 46%;
+  --accent-700: 201 61% 36%;
+  --accent-800: 201 56% 26%;
+  --accent-900: 201 51% 16%;
+  
+  /* System Variables */
+  --border: 220 13% 91%;
+  --input: var(--border);
+  --ring: var(--primary);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 220 27% 8%;
+  --foreground: 220 13% 95%;
+
+  --card: 220 27% 10%;
+  --card-foreground: 220 13% 95%;
+
+  --popover: 220 27% 10%;
+  --popover-foreground: 220 13% 95%;
+
+  --primary: 0 73% 75%;
+  --primary-foreground: 0 0% 0%;
+
+  --secondary: 174 64% 62%;
+  --secondary-foreground: 0 0% 0%;
+
+  --muted: 220 27% 18%;
+  --muted-foreground: 220 13% 65%;
+
+  --accent: 201 71% 62%;
+  --accent-foreground: 0 0% 0%;
+
+  --border: 220 27% 20%;
+  --input: 220 27% 20%;
+  --ring: 0 73% 75%;
+  
+  /* Dark Mode System Colors */
+  --success: 152 57% 58%;
+  --warning: 45 93% 73%;
+  --error: 0 73% 75%;
+  --info: 201 71% 62%;
+}
+
+/* Timer Component Styles */
+.timer-display {
+  @apply text-6xl font-mono font-bold text-foreground;
+}
+
+.timer-controls {
+  @apply flex items-center justify-center gap-4;
+}
+
+.timer-button {
+  @apply px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105 active:scale-95;
+}
+
+.timer-button-start {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+}
+
+.timer-button-pause {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+}
+
+.timer-button-reset {
+  @apply bg-muted text-muted-foreground hover:bg-muted/80;
+}
+
+/* Session Type Indicators */
+.session-work {
+  @apply bg-primary/10 border-primary/20 text-primary;
+}
+
+.session-break {
+  @apply bg-secondary/10 border-secondary/20 text-secondary;
+}
+
+/* Statistics Cards */
+.stats-card {
+  @apply bg-card border border-border rounded-lg p-6 shadow-sm;
+}
+
+.stats-value {
+  @apply text-3xl font-bold text-foreground;
+}
+
+.stats-label {
+  @apply text-sm text-muted-foreground uppercase tracking-wide;
+}
+
+/* Settings Panel */
+.settings-section {
+  @apply space-y-4 p-6 bg-surface border border-border rounded-lg;
+}
+
+.settings-toggle {
+  @apply flex items-center justify-between p-3 bg-surface-muted rounded-md;
+}
+
+/* Progress Indicators */
+.progress-bar {
+  @apply w-full bg-muted rounded-full h-2 overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-primary transition-all duration-300 ease-out;
+}
+
+/* Notification Styles */
+.notification-success {
+  @apply bg-success/10 border-success/20 text-success;
+}
+
+.notification-warning {
+  @apply bg-warning/10 border-warning/20 text-warning;
+}
+
+/* Focus Mode */
+.focus-mode {
+  @apply bg-gradient-to-br from-primary/5 to-accent/5 min-h-screen;
+}
+
+/* Responsive Timer */
+@media (max-width: 640px) {
+  .timer-display {
+    @apply text-4xl;
+  }
+  
+  .timer-button {
+    @apply px-6 py-3 text-sm;
+  }
+}
